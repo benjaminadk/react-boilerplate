@@ -18,7 +18,7 @@ const httpLink = ApolloLink.from([
     uri:
       process.env.NODE_ENV === 'production'
         ? `https://${process.env.REACT_APP_PROD}/graphql`
-        : `http://localhost:${process.env.REACT_APP_DEV}/graphql`,
+        : `http://localhost:${process.env.REACT_APP_SERVER_PORT}/graphql`,
     credentials: 'same-origin'
   })
 ])
@@ -36,7 +36,7 @@ const wsLink = new WebSocketLink({
   uri:
     process.env.NODE_ENV === 'production'
       ? `wss://${process.env.REACT_APP_PROD}/graphql`
-      : `ws://localhost:${process.env.REACT_APP_DEV}/graphql`,
+      : `ws://localhost:${process.env.REACT_APP_SERVER_PORT}/graphql`,
   options: {
     reconnect: true
   }

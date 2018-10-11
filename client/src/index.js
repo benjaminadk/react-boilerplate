@@ -7,6 +7,7 @@ import client from './apollo/client'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import './styles/index.css'
+import 'typeface-roboto'
 
 ReactDOM.render(
   <ApolloProvider client={client}>

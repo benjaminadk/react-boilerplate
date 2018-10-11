@@ -47,4 +47,4 @@ if (process.env.NODE_ENV === 'production') {
 
 const httpServer = http.createServer(app)
 server.installSubscriptionHandlers(httpServer)
-httpServer.listen(keys.PORT, () => console.log('SERVER UP'))
+httpServer.listen(keys.PORT_BACKEND, () => console.log('SERVER UP'))
